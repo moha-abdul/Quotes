@@ -1,20 +1,26 @@
-<form>
-  <fieldset>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Name of person submitting</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Quote</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter quote">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Author</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter author name">
-    </div>
-    <div class="form-group">
-      <label for="exampleSelect1">Example select</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </fieldset>
-</form>
+<div class="container-fluid">
+  <div class="row">
+    <form #goalForm='ngForm'>
+      <!-- id -->
+      <!-- <p>{{quote.id}}</p> -->
+      <!-- Name Form -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text"  class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" placeholder="Enter name" required>
+      </div>
+
+      <!-- Quote Form -->
+      <div class="form-group">
+        <label for="quoteWords">Quote</label>
+        <textarea class="form-control" id="quoteWords" rows="4" [(ngModel)]="newQuote.quoteWords" name="quoteWords" #quoteWords="ngModel" placeholder="Enter Quote" required></textarea>
+      </div>
+
+      <!-- Author Form -->
+      <div class="form-group">
+        <label for="quoteWords">Author</label>
+        <input type="text"  class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" placeholder="Enter author" required>
+      </div>
+      <button type="button" class="btn btn-primary">Add quote</button>
+    </form>
+  </div>
+</div>
