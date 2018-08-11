@@ -2,16 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { QuotesNavComponent } from './quotes-nav/quotes-nav.component';
-import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteComponent } from './quote/quote.component';
+import { QuoteNavComponent } from './quote-nav/quote-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuotesNavComponent,
-    QuotesComponent,
-    QuoteComponent
+    QuoteComponent,
+    QuoteNavComponent
   ],
   imports: [
     BrowserModule
