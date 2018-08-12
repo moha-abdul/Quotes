@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Quote } from '@angular/compiler';
+import { Quotes } from '../quotes';
 
 @Component({
   selector: 'app-quote',
@@ -9,16 +9,16 @@ import { Quote } from '@angular/compiler';
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote("moha1", "to be or not be", "willy"),
-    new Quote("moha", "to bee or not be", "willy shakes")
+    new Quotes(1, "moha1", "to be or not be", "willy"),
+    new Quotes(2, "moha", "to bee or not be", "willy shakes")
   ]
 
-  addNewQuote(quote){
+  //addNewQuote(quote){
     // let quoteLength = this.quotes.length;
     // quote.id = quoteLength + 1;
-    this.quotes.push(quote)
+    //this.quotes.push(quote)
 
-}
+//}
   constructor() { }
 
   ngOnInit() {
