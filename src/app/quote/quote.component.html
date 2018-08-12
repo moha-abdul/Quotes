@@ -5,8 +5,8 @@
             <ul>
                 <li *ngFor='let quote of quotes'>{{quote.name}}, {{quote.quoteWords}}, {{quote.author}}</li>
             </ul>
-                <!-- <app-quote-info [quote]='quote'></app-quote-info> -->
+                <app-quote-info [quote]='quote'></app-quote-info>
         
-        <!-- <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form> -->
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     <!-- </div>
 </div> -->
