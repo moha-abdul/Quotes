@@ -1,18 +1,30 @@
 <h1>Quotes Page</h1>
-<!-- <div class="container">
-    <div class="row"> -->
-        
+<div class="container">
+    <div class="row">
+            <div class="jumbotron">
+                    <h1 class="display-3">Quotes</h1>
+                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <hr class="my-4">
+                    <p></p>
+                    <p class="lead">
+                            <app-quote-form (addQuote)="addNewQuote($event)"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></app-quote-form>
+                    </p>
+                    
+                  </div>
             <ul>
-                <li *ngFor='let quote of quotes; let i = index'>{{quote.name}}, {{quote.quoteWords}}, {{quote.author}}
-                    <br>
+                <li *ngFor='let quote of quotes; let i = index'>
+                    {{quote.name}}<br>
+                    {{quote.quoteWords}}<br>
+                    {{quote.author}}<br>
                 <p>{{quote.date|date}}</p>
+            
                 
                 <button type="button" class="btn btn-warning" (click) ='deleteQuote(index)'>Delete Quote</button>
-                <button type="button" class="btn btn-success">Upvote</button>
+                <button type="button" class="btn btn-success" (click) ='upvoteQuote(index)'>Upvote</button>
                 <button type="button" class="btn btn-secondary">Downvote</button></li>
             </ul>
                 <app-quote-info [quote]='quote'></app-quote-info>
         
-        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    <!-- </div>
-</div> -->
+        
+    </div>
+</div>
