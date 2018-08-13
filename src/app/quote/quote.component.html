@@ -3,7 +3,9 @@
     <div class="row"> -->
         
             <ul>
-                <li *ngFor='let quote of quotes'>{{quote.name}}, {{quote.quoteWords}}, {{quote.author}}</li>
+                <li *ngFor='let quote of quotes; let i = index'>{{quote.name}}, {{quote.quoteWords}}, {{quote.author}} <button type="button" class="btn btn-warning">Delete Quote</button>
+                <button type="button" class="btn btn-success">Upvote</button>
+                <button type="button" class="btn btn-secondary">Downvote</button></li>
             </ul>
                 <app-quote-info [quote]='quote'></app-quote-info>
         
