@@ -21,7 +21,8 @@
 															</div>
 															<div class="card-footer">{{quote.author}}</div>
 															<button type="button" class="btn btn-outline-secondary">{{quote.date|date}}</button>
-															<p>This quote was posted {{quote.date|date|time}} days ago</p>
+                              <p>This quote was posted {{quote.date|date|time}} days ago</p>
+                              <button type="button" class="btn btn-danger" (click) ='deleteQuote()'>Delete Quote</button>
 													<app-quote-info [quote]='quote'></app-quote-info>
 									</div>
 
