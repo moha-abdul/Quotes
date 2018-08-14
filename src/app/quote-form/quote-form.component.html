@@ -7,9 +7,9 @@
       <div class="form-group ">
         <label for="name">Name</label>
         <input type="text"  class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" placeholder="Enter name" required>
-        
+
       </div>
-      
+
 
       <!-- Quote Form -->
       <div class="form-group row text-center">
@@ -23,13 +23,7 @@
         <input type="text"  class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" placeholder="Enter author" required>
       </div>
       <button type="button" class="btn btn-primary" (click)='submitQuote()'>Add quote</button>
-      
-      <!-- <div>
-          <button type="button" class="btn btn-primary">Delete quote</button>
-      </div> -->
-      
-      <!-- <button type="button" class="btn btn-primary">Upvote quote</button>
-      <button type="button" class="btn btn-primary">Downvote quote</button>  -->
+
     </form>
   </div>
 </div>
